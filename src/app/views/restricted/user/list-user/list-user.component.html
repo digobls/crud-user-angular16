@@ -1,0 +1,140 @@
+<div class="row list-user">
+  <div class="col-12">
+    <div class="container-filter-new-user">
+      <div class="container-filter">
+        <div class="form-group">
+          <app-input-type
+            [formGroup]="formSearch"
+            [id]="'search'"
+            [name]="'search'"
+            [type]="'text'"
+            [placeholder]="'Pesquise pelo nome ou e-mail'"
+            [iconClass]="'ri-search-line'"
+            [showLabel]="false"
+            [isRequired]="false">
+          </app-input-type>
+        </div>
+        <div class="form-group">
+          <app-input-type
+            [formGroup]="formSearch"
+            [id]="'filter'"
+            [name]="'filter'"
+            [type]="'select'"
+            [placeholder]="'Filtrar'"
+            [loadingData]="loadingFilter"
+            [listItems]="listFilters"
+            [bindLabel]="'name'"
+            [showLabel]="false"
+            [isRequired]="false">
+          </app-input-type>
+        </div>
+      </div>
+
+      <div class="container-btn">
+        <button (click)="newUser()" class="btn-new-user">Novo usuário</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <ng-container *ngIf="!loadingList && listUsers?.length">
+      <div class="container-box-table">
+        <div class="default-table table-responsive offset-top-20 custom-table">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Usuário</th>
+              <th>Status</th>
+              <th (click)="sort('createAt')" class="content-sort">
+                Data de criação
+                <span *ngIf="header.sortedColumn !== 'createAt'" class="sort">
+                  <i class="ri-expand-up-down-line"></i>
+                </span>
+                <span *ngIf="header.sortable && header.sortedColumn === 'createAt'" class="sort">
+                  <i class="ri-arrow-up-s-fill" *ngIf="header.sortOrder === 'asc'"></i>
+                  <i class="ri-arrow-down-s-fill" *ngIf="header.sortOrder === 'desc'"></i>
+                </span>
+              </th>
+              <th (click)="sort('lastAccess')" class="content-sort">
+                Último acesso
+                <span *ngIf="header.sortedColumn !== 'lastAccess'" class="sort">
+                  <i class="ri-expand-up-down-line"></i>
+                </span>
+                <span *ngIf="header.sortable && header.sortedColumn === 'lastAccess'" class="sort">
+                  <i class="ri-arrow-up-s-fill" *ngIf="header.sortOrder === 'asc'"></i>
+                  <i class="ri-arrow-down-s-fill" *ngIf="header.sortOrder === 'desc'"></i>
+                </span>
+              </th>
+              <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr *ngFor="let row of listUsers; index as i">
+              <td class="container-table-user">
+                <div class="container-avatar">
+                  <div class="rounded-name">
+                    <span>{{row?.firstName.charAt(0)}}{{row?.lastName.charAt(0)}}</span>
+                  </div>
+
+                  <div class="container-info">
+                    <span class="name">{{row?.firstName}} {{row?.lastName}}</span>
+                    <span [innerText]="row?.email" class="email"></span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span [innerText]="row?.statusString" [ngClass]="{'box-success': row?.statusType === 1, 'box-warning': row?.statusType === 2, 'box-danger': row?.statusType === 3}" class="box-hours"></span>
+              </td>
+              <td>
+                <span [innerText]="row?.createAt | date: 'dd/MM/yyyy'"></span>
+              </td>
+              <td>
+                <span [innerText]="row?.lastAccess ? (row.lastAccess | date: 'dd/MM/yyyy') : '-'"></span>
+              </td>
+              <td class="container-actions">
+                <div class="box-action">
+                  <i class="ri-more-2-fill"></i>
+
+                  <div class="list-actions">
+                    <span (click)="newUser(row)"><i class="ri-pencil-line"></i> Editar</span>
+                    <span (click)="checkRemove(row)"><i class="ri-delete-bin-line"></i> Excluir</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="container-pagination">
+        <ngb-pagination
+          [(page)]="dataPagination.currentPage"
+          [collectionSize]="dataPagination.totalRecords"
+          [pageSize]="dataPagination.totalRecordsPerPage"
+          [maxSize]="5"
+          [ellipses]="true"
+          [boundaryLinks]="false"
+          (pageChange)="onChangePage($event)">
+          <ng-template ngbPaginationPrevious>Anterior</ng-template>
+          <ng-template ngbPaginationNext>Próxima</ng-template>
+        </ngb-pagination>
+
+        <div class="container-items-per-page">
+          <app-items-per-page
+            [totalRecordsPerPage]="dataPagination.totalRecordsPerPage"
+            (changeTotalRecords)="onChangeRecords($event)">
+          </app-items-per-page>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!loadingList && !listUsers?.length">
+      <div class="container-empty">
+        <p>Nenhum usuário cadastrado</p>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="loadingList">
+
+    </ng-container>
+  </div>
+</div>

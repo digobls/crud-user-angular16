@@ -1,0 +1,13 @@
+<div class="container-items-per-page">
+    <div (click)="showList()" class="data-page">
+        <span [innerText]="totalRecordsPerPage"></span>
+        <span class="items">Itens por página</span>
+        <i class="ri-arrow-down-s-line"></i>
+    </div>
+
+    <div *ngIf="openList" class="list-total-page" [ngClass]="openList ? 'view-list' : 'hidden-list'">
+        <span *ngFor="let data of listRecords"
+              [ngClass]="data.value === totalRecordsPerPage ? 'hidden-list' : 'view-list'"
+              (click)="onChangeRecords(data.value)">{{data.value}} Itens por página</span>
+    </div>
+</div>

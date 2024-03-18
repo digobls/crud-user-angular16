@@ -1,0 +1,139 @@
+<div class="modal-body container-default-modal">
+  <a type="button" class="close" aria-label="Close" (click)="closeModal()">
+    <i class="ri-close-line"></i>
+  </a>
+
+  <div class="row">
+    <div class="col-12 container-title-modal">
+      <h2 class="title">{{userId ? 'Editar usuário' : 'Adicionar usuário'}}</h2>
+      <p class="description-txt">Aqui você adiciona e configura os usuários que fazem parte da sua equipe</p>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="form-group">
+        <app-input-type
+          [formGroup]="formUser"
+          [id]="'firstName'"
+          [name]="'firstName'"
+          [type]="'text'"
+          [label]="'Nome'"
+          [placeholder]="'Nome'"
+          [iconClass]="'ri-search-line'"
+          [showLabel]="true"
+          [isRequired]="true">
+        </app-input-type>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="form-group">
+        <app-input-type
+          [formGroup]="formUser"
+          [id]="'lastName'"
+          [name]="'lastName'"
+          [type]="'text'"
+          [label]="'Sobrenome'"
+          [placeholder]="'Sobrenome'"
+          [showLabel]="true"
+          [isRequired]="true">
+        </app-input-type>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 offset-top-10">
+      <div class="form-group">
+        <app-input-type
+          [formGroup]="formUser"
+          [id]="'phone'"
+          [name]="'phone'"
+          [type]="'text'"
+          [mask]="'(00) 0000-0000||(00) 00000-0000'"
+          [label]="'Telefone'"
+          [placeholder]="'Telefone'"
+          [showOptional]="true"
+          [showLabel]="true"
+          [isRequired]="true">
+        </app-input-type>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 offset-top-10">
+      <div class="form-group">
+        <app-input-type
+          [formGroup]="formUser"
+          [id]="'email'"
+          [name]="'email'"
+          [type]="'text'"
+          [label]="'Email corporativo'"
+          [placeholder]="'Email corporativo'"
+          [showLabel]="true"
+          [isRequired]="true">
+        </app-input-type>
+      </div>
+    </div>
+    <div class="col-12 col-md-12 offset-top-10">
+      <div class="form-group">
+        <app-input-type
+          [formGroup]="formUser"
+          [id]="'roles'"
+          [name]="'roles'"
+          [type]="'select'"
+          [label]="'Perfil de acesso'"
+          [placeholder]="'Perfil de acesso'"
+          [loadingData]="loadingRoles"
+          [listItems]="listRoles"
+          [bindLabel]="'name'"
+          [multiple]="true"
+          [showLabel]="true"
+          [isRequired]="true">
+        </app-input-type>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 offset-top-10">
+      <div class="form-group">
+        <app-input-type
+          [formGroup]="formUser"
+          [id]="'language'"
+          [name]="'language'"
+          [type]="'select'"
+          [label]="'Idioma'"
+          [placeholder]="'Idioma'"
+          [loadingData]="loadingLanguages"
+          [listItems]="listLanguages"
+          [bindLabel]="'name'"
+          [bindValue]="'id'"
+          [multiple]="false"
+          [showLabel]="true"
+          [isRequired]="true">
+        </app-input-type>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 offset-top-10">
+      <div class="form-group">
+        <app-input-type
+          [formGroup]="formUser"
+          [showOptional]="true"
+          [id]="'contactType'"
+          [name]="'contactType'"
+          [type]="'radio'"
+          [label]="'Contato preferencial'"
+          [radioItems]="listTypeContact"
+          [displayInline]="true"
+          [showLabel]="true"
+          [isRequired]="true">
+        </app-input-type>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-btn-bottom offset-top-20">
+    <button class="button-default btn-transparent" (click)="closeModal()" [disabled]="loadingSend">
+      <span>Fechar</span>
+    </button>
+    <app-default-button
+      [id]="'registerUser'"
+      [text]="userId ? 'Salvar alterações' : 'Enviar convite'"
+      [type]="'button'"
+      [loading]="loadingSend"
+      [disabled]="loadingSend"
+      (click)="checkChange()">
+    </app-default-button>
+  </div>
+</div>

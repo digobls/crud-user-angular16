@@ -1,0 +1,30 @@
+<nav class="default-sidebar" [ngClass]="{'expanded': isExpanded || showMenu}" (mouseenter)="expand()" (mouseleave)="collapse()">
+  <div class="navbar-header">
+    <ul>
+      <li class="head-logo">
+        <a class="navbar-brand" [routerLink]="''">
+          <img src="/assets/img/global/logo-min.png" height="45" width="47" alt="First" class="logo"/>
+        </a>
+
+        <div class="close-and-open-menu">
+          <i (click)="openAndCloseMenu()" [ngClass]="isExpanded ? 'ri-arrow-left-double-line' : 'ri-arrow-right-double-line'"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="navigation">
+    <li>
+      <a (click)="showAlert()">
+        <i class="ri-home-2-line"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="'/usuario'" class="active">
+        <i class="ri-user-3-line"></i>
+        <span>Usuários</span>
+      </a>
+    </li>
+  </ul>
+</nav>

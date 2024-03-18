@@ -1,0 +1,37 @@
+.list-user {
+
+  .container-filter-new-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .container-filter {
+      display: flex;
+      gap: 10px;
+      flex-direction: row;
+
+      .form-group {
+        min-width: 120px;
+
+        &:first-of-type {
+          width: 240px;
+        }
+      }
+    }
+
+    .container-btn {
+      .btn-new-user {
+        color: #fff;
+        border-radius: 8px;
+        border: none;
+        background: #6690fc;
+        font-size: 14px;
+        height: 38px;
+        line-height: 36px;
+        min-width: 140px;
+        padding: 0 10px;
+      }
+    }
+  }
+}

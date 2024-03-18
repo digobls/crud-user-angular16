@@ -1,0 +1,1036 @@
+{
+  "users": [
+    {
+      "firstName": "Rodrigo",
+      "lastName": "Pereira",
+      "phone": "04921409210",
+      "email": "digo.bls@hotmail.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        },
+        {
+          "id": "3",
+          "name": "Cordenador"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "id": "ec44",
+      "createAt": "2024-03-16T00:28:18.318Z",
+      "lastAccess": "2024-03-18T13:58:37.760Z",
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Juliana",
+      "lastName": "Oliveira",
+      "phone": "56783462781",
+      "email": "juliana.oliveira@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": "2024-03-18T13:58:37.760Z",
+      "statusType": 2,
+      "statusString": "Pendente"
+    },
+    {
+      "id": "f7d4",
+      "firstName": "Fernanda",
+      "lastName": "Santos",
+      "phone": "65482912345",
+      "email": "fernanda.santos@example.com",
+      "roles": [
+        {
+          "id": "4",
+          "name": "Gerente"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": "2024-03-18T13:58:37.760Z",
+      "statusType": 3,
+      "statusString": "Bloqueado"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Bruno",
+      "lastName": "Costa",
+      "phone": "64782917345",
+      "email": "bruno.costa@example.com",
+      "roles": [
+        {
+          "id": "5",
+          "name": "Supervisor"
+        }
+      ],
+      "language": "9a2b",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": "2024-03-16T13:58:37.760Z",
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "8c3a",
+      "firstName": "Ricardo",
+      "lastName": "Silva",
+      "phone": "58793462873",
+      "email": "ricardo.silva@example.com",
+      "roles": [
+        {
+          "id": "3",
+          "name": "Cordenador"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Patricia",
+      "lastName": "Oliveira",
+      "phone": "60983462789",
+      "email": "patricia.oliveira@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 2,
+      "statusString": "Pendente"
+    },
+    {
+      "id": "f7d4",
+      "firstName": "Luiz",
+      "lastName": "Santos",
+      "phone": "68792345928",
+      "email": "luiz.santos@example.com",
+      "roles": [
+        {
+          "id": "5",
+          "name": "Supervisor"
+        }
+      ],
+      "language": "9a2b",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "8c3a",
+      "firstName": "Aline",
+      "lastName": "Silva",
+      "phone": "59834267389",
+      "email": "aline.silva@example.com",
+      "roles": [
+        {
+          "id": "3",
+          "name": "Cordenador"
+        }
+      ],
+      "language": "fcbc",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Carlos",
+      "lastName": "Ferreira",
+      "phone": "64829375671",
+      "email": "carlos.ferreira@example.com",
+      "roles": [
+        {
+          "id": "4",
+          "name": "Gerente"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 3,
+      "statusString": "Bloqueado"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Fernando",
+      "lastName": "Costa",
+      "phone": "68793247912",
+      "email": "fernando.costa@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": "2024-03-18T13:58:37.760Z",
+      "statusType": 2,
+      "statusString": "Pendente"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "João",
+      "lastName": "Oliveira",
+      "phone": "58682276998",
+      "email": "joao.oliveira@example.com",
+      "roles": [
+        {
+          "id": "3",
+          "name": "Cordenador"
+        }
+      ],
+      "language": "9a2b",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Mariana",
+      "lastName": "Santos",
+      "phone": "47381945051",
+      "email": "mariana.santos@example.com",
+      "roles": [
+        {
+          "id": "5",
+          "name": "Supervisor"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": "2024-03-18T13:58:37.760Z",
+      "statusType": 2,
+      "statusString": "Pendente"
+    },
+    {
+      "id": "f7d4",
+      "firstName": "Pedro",
+      "lastName": "Ferreira",
+      "phone": "62423915181",
+      "email": "pedro.ferreira@example.com",
+      "roles": [
+        {
+          "id": "4",
+          "name": "Gerente"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 3,
+      "statusString": "Bloqueado"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Ana",
+      "lastName": "Costa",
+      "phone": "65592792967",
+      "email": "ana.costa@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "f7d4",
+      "firstName": "Rafael",
+      "lastName": "Souza",
+      "phone": "69389366534",
+      "email": "rafael.souza@example.com",
+      "roles": [
+        {
+          "id": "5",
+          "name": "Supervisor"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "João",
+      "lastName": "Oliveira",
+      "phone": "58682276998",
+      "email": "joao.oliveira@example.com",
+      "roles": [
+        {
+          "id": "3",
+          "name": "Cordenador"
+        }
+      ],
+      "language": "9a2b",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Mariana",
+      "lastName": "Santos",
+      "phone": "47381945051",
+      "email": "mariana.santos@example.com",
+      "roles": [
+        {
+          "id": "5",
+          "name": "Supervisor"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 2,
+      "statusString": "Pendente"
+    },
+    {
+      "id": "f7d4",
+      "firstName": "Pedro",
+      "lastName": "Ferreira",
+      "phone": "62423915181",
+      "email": "pedro.ferreira@example.com",
+      "roles": [
+        {
+          "id": "4",
+          "name": "Gerente"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 3,
+      "statusString": "Bloqueado"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Ana",
+      "lastName": "Costa",
+      "phone": "65592792967",
+      "email": "ana.costa@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "f7d4",
+      "firstName": "Rafael",
+      "lastName": "Souza",
+      "phone": "69389366534",
+      "email": "rafael.souza@example.com",
+      "roles": [
+        {
+          "id": "5",
+          "name": "Supervisor"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "8c3a",
+      "firstName": "Carla",
+      "lastName": "Silva",
+      "phone": "72254074511",
+      "email": "carla.silva@example.com",
+      "roles": [
+        {
+          "id": "3",
+          "name": "Cordenador"
+        }
+      ],
+      "language": "fcbc",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Lucas",
+      "lastName": "Santos",
+      "phone": "58068786291",
+      "email": "lucas.santos@example.com",
+      "roles": [
+        {
+          "id": "4",
+          "name": "Gerente"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 2,
+      "statusString": "Pendente"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Gustavo",
+      "lastName": "Oliveira",
+      "phone": "59143470666",
+      "email": "gustavo.oliveira@example.com",
+      "roles": [
+        {
+          "id": "5",
+          "name": "Supervisor"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 3,
+      "statusString": "Bloqueado"
+    },
+    {
+      "id": "f7d4",
+      "firstName": "Paula",
+      "lastName": "Ferreira",
+      "phone": "60191913147",
+      "email": "paula.ferreira@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "9a2b",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Juliana",
+      "lastName": "Oliveira",
+      "phone": "56783462781",
+      "email": "juliana.oliveira@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": "2024-03-18T13:58:37.760Z",
+      "statusType": 2,
+      "statusString": "Pendente"
+    },
+    {
+      "id": "f7d4",
+      "firstName": "Fernanda",
+      "lastName": "Santos",
+      "phone": "65482912345",
+      "email": "fernanda.santos@example.com",
+      "roles": [
+        {
+          "id": "4",
+          "name": "Gerente"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 3,
+      "statusString": "Bloqueado"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Bruno",
+      "lastName": "Costa",
+      "phone": "64782917345",
+      "email": "bruno.costa@example.com",
+      "roles": [
+        {
+          "id": "5",
+          "name": "Supervisor"
+        }
+      ],
+      "language": "9a2b",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "8c3a",
+      "firstName": "Ricardo",
+      "lastName": "Silva",
+      "phone": "58793462873",
+      "email": "ricardo.silva@example.com",
+      "roles": [
+        {
+          "id": "3",
+          "name": "Cordenador"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Patricia",
+      "lastName": "Oliveira",
+      "phone": "60983462789",
+      "email": "patricia.oliveira@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 2,
+      "statusString": "Pendente"
+    },
+    {
+      "id": "f7d4",
+      "firstName": "Luiz",
+      "lastName": "Santos",
+      "phone": "68792345928",
+      "email": "luiz.santos@example.com",
+      "roles": [
+        {
+          "id": "5",
+          "name": "Supervisor"
+        }
+      ],
+      "language": "9a2b",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "8c3a",
+      "firstName": "Aline",
+      "lastName": "Silva",
+      "phone": "59834267389",
+      "email": "aline.silva@example.com",
+      "roles": [
+        {
+          "id": "3",
+          "name": "Cordenador"
+        }
+      ],
+      "language": "fcbc",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Carlos",
+      "lastName": "Ferreira",
+      "phone": "64829375671",
+      "email": "carlos.ferreira@example.com",
+      "roles": [
+        {
+          "id": "4",
+          "name": "Gerente"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 3,
+      "statusString": "Bloqueado"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Fernando",
+      "lastName": "Costa",
+      "phone": "68793247912",
+      "email": "fernando.costa@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 2,
+      "statusString": "Pendente"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Marcelo",
+      "lastName": "Oliveira",
+      "phone": "58672279341",
+      "email": "marcelo.oliveira@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "f7d4",
+      "firstName": "Rodrigo",
+      "lastName": "Santos",
+      "phone": "62341987829",
+      "email": "rodrigo.santos@example.com",
+      "roles": [
+        {
+          "id": "4",
+          "name": "Gerente"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": "2024-03-16T13:58:37.760Z",
+      "statusType": 3,
+      "statusString": "Bloqueado"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Carolina",
+      "lastName": "Costa",
+      "phone": "64982374569",
+      "email": "carolina.costa@example.com",
+      "roles": [
+        {
+          "id": "5",
+          "name": "Supervisor"
+        }
+      ],
+      "language": "9a2b",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "8c3a",
+      "firstName": "Roberto",
+      "lastName": "Silva",
+      "phone": "63482759123",
+      "email": "roberto.silva@example.com",
+      "roles": [
+        {
+          "id": "3",
+          "name": "Cordenador"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Isabela",
+      "lastName": "Oliveira",
+      "phone": "62582735691",
+      "email": "isabela.oliveira@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 2,
+      "statusString": "Pendente"
+    },
+    {
+      "id": "f7d4",
+      "firstName": "Renata",
+      "lastName": "Santos",
+      "phone": "68729347569",
+      "email": "renata.santos@example.com",
+      "roles": [
+        {
+          "id": "5",
+          "name": "Supervisor"
+        }
+      ],
+      "language": "9a2b",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "8c3a",
+      "firstName": "Rodrigo",
+      "lastName": "Silva",
+      "phone": "64732984579",
+      "email": "rodrigo.silva@example.com",
+      "roles": [
+        {
+          "id": "3",
+          "name": "Cordenador"
+        }
+      ],
+      "language": "fcbc",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": "2024-03-17T13:58:37.760Z",
+      "statusType": 1,
+      "statusString": "Ativo"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Daniel",
+      "lastName": "Ferreira",
+      "phone": "64982735691",
+      "email": "daniel.ferreira@example.com",
+      "roles": [
+        {
+          "id": "4",
+          "name": "Gerente"
+        }
+      ],
+      "language": "7403",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 3,
+      "statusString": "Bloqueado"
+    },
+    {
+      "id": "d8fe",
+      "firstName": "Marta",
+      "lastName": "Costa",
+      "phone": "67924357918",
+      "email": "marta.costa@example.com",
+      "roles": [
+        {
+          "id": "1",
+          "name": "Analista"
+        }
+      ],
+      "language": "c4c7",
+      "contactType": {
+        "id": 3,
+        "name": "Todos"
+      },
+      "createAt": "2024-03-18T13:58:37.760Z",
+      "lastAccess": null,
+      "statusType": 2,
+      "statusString": "Pendente"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Alemão DE",
+      "id": "e47e"
+    },
+    {
+      "name": "Árabe AR",
+      "id": "15f5"
+    },
+    {
+      "name": "Bengali BD",
+      "id": "9b31"
+    },
+    {
+      "name": "Chinês CN",
+      "id": "ae57"
+    },
+    {
+      "name": "Coreano KR",
+      "id": "a93e"
+    },
+    {
+      "name": "Espanhol ES",
+      "id": "7403"
+    },
+    {
+      "name": "Francês FR",
+      "id": "fcbc"
+    },
+    {
+      "name": "Hindi IN",
+      "id": "18f6"
+    },
+    {
+      "name": "Indonésio ID",
+      "id": "72fe"
+    },
+    {
+      "name": "Inglês EN",
+      "id": "6d44"
+    },
+    {
+      "name": "Italiano IT",
+      "id": "4c4f"
+    },
+    {
+      "name": "Japonês JP",
+      "id": "6f71"
+    },
+    {
+      "name": "Malaio MY",
+      "id": "38a9"
+    },
+    {
+      "name": "Polonês PL",
+      "id": "de03"
+    },
+    {
+      "name": "Português BR",
+      "id": "c4c7"
+    },
+    {
+      "name": "Russo RU",
+      "id": "48a2"
+    },
+    {
+      "name": "Tailandês TH",
+      "id": "5fd2"
+    },
+    {
+      "name": "Turco TR",
+      "id": "ec55"
+    },
+    {
+      "name": "Ucraniano UA",
+      "id": "5760"
+    },
+    {
+      "name": "Vietnamita VN",
+      "id": "fc4b"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "name": "Analista"
+    },
+    {
+      "id": "2",
+      "name": "Assistente"
+    },
+    {
+      "id": "3",
+      "name": "Cordenador"
+    },
+    {
+      "id": "4",
+      "name": "Gerente"
+    },
+    {
+      "id": "5",
+      "name": "Surpervisor"
+    }
+  ]
+}

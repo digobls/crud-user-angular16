@@ -1,0 +1,158 @@
+<!--<ng-container *ngIf="!isAccordionTable">-->
+<!--    &lt;!&ndash; Search on table &ndash;&gt;-->
+<!--    <ng-container *ngIf="!loadingList && showSimpleSearch">-->
+<!--        <div class="box-search-and-new-item">-->
+<!--            <div class="content-input">-->
+<!--&lt;!&ndash;                <app-input-type&ndash;&gt;-->
+<!--&lt;!&ndash;                    [formGroup]="searchForm"&ndash;&gt;-->
+<!--&lt;!&ndash;                    [id]="'search'"&ndash;&gt;-->
+<!--&lt;!&ndash;                    [name]="'search'"&ndash;&gt;-->
+<!--&lt;!&ndash;                    [type]="'text'"&ndash;&gt;-->
+<!--&lt;!&ndash;                    [iconInput]="'ri-search-line'"&ndash;&gt;-->
+<!--&lt;!&ndash;                    [iconLeft]="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    [placeholder]="'Buscar...'"&ndash;&gt;-->
+<!--&lt;!&ndash;                    [showLabel]="false"&ndash;&gt;-->
+<!--&lt;!&ndash;                    [isRequired]="false">&ndash;&gt;-->
+<!--&lt;!&ndash;            </app-input-type>&ndash;&gt;-->
+<!--            </div>-->
+
+<!--            <ng-container *ngIf="showBtnNew">-->
+<!--                <div [sharePermissionSSO]="permissionBtnNew" class="content-new-item">-->
+<!--                    <a *ngIf="!routeBtnNew" (click)="onCallNewItem()" class="btn btn-primary">-->
+<!--                        <i [class]="iconBtnNew"></i>-->
+<!--                        <span [innerText]="titleBtnNew"></span>-->
+<!--                    </a>-->
+<!--                    <a *ngIf="routeBtnNew && permissionBtnNew" [routerLink]="routeBtnNew" class="btn btn-primary">-->
+<!--                        <i [class]="iconBtnNew"></i>-->
+<!--                        <span [innerText]="titleBtnNew"></span>-->
+<!--                    </a>-->
+<!--                    <a *ngIf="routeBtnNew && !permissionBtnNew" class="btn btn-primary">-->
+<!--                        <i [class]="iconBtnNew"></i>-->
+<!--                        <span [innerText]="titleBtnNew"></span>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </ng-container>-->
+<!--        </div>-->
+<!--    </ng-container>-->
+
+<!--    &lt;!&ndash; Data table &ndash;&gt;-->
+<!--    <div *ngIf="!loadingList && listData?.length > 0" class="table-responsive offset-top-20 custom-table">-->
+<!--        <table class="table">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th *ngFor="let header of listHeader" (click)="sort(header.key)" [class]="header.sortable ? 'dsf-sortable' : ''">-->
+<!--                    {{ header.label }}-->
+<!--                    <span *ngIf="header.sortable">-->
+<!--                      <i class="ri-expand-up-down-line" *ngIf="header.sortOrder !== 'asc' && header.sortOrder !== 'desc'"></i>-->
+<!--                      <i class="ri-arrow-up-s-fill" *ngIf="header.sortOrder === 'asc'"></i>-->
+<!--                      <i class="ri-arrow-down-s-fill" *ngIf="header.sortOrder === 'desc'"></i>-->
+<!--                    </span>-->
+<!--                </th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+
+<!--            <tbody>-->
+<!--                <tr *ngFor="let row of listData; index as i">-->
+<!--                    <td *ngFor="let header of listHeader" [ngClass]="{'overflow-hidden action-table-icons': header.key === 'actions' || header.key === 'isActive'}">-->
+<!--                        <ng-container *ngIf="header.key !== 'actions' && header.key !== 'isActive' && header.key !== 'timeControl'">-->
+<!--                            <ng-container *ngIf="!header.isDate">-->
+<!--                                {{row[header.key] ? row[header.key] : '-' }}-->
+<!--                                <span *ngIf="header?.isTitle && row?.code"><br>{{row?.code}}</span>-->
+<!--                            </ng-container>-->
+<!--                            <ng-container *ngIf="header.isDate">-->
+<!--                                {{row[header.key] | date: 'dd/MM/yyyy'}}-->
+<!--                            </ng-container>-->
+<!--                        </ng-container>-->
+
+<!--                        <ng-container *ngIf="header.key === 'timeControl'">-->
+<!--                            <p *ngIf="row?.timeControl?.hoursLeftPhrase"-->
+<!--                               [innerText]="row.timeControl.hoursLeftPhrase"-->
+<!--                               [ngStyle]="{'background': row.timeControl.backgroundColor, 'color': row.timeControl.foregroundColor}"-->
+<!--                               class="box-hours"></p>-->
+<!--                            <p *ngIf="!row?.timeControl?.hoursLeftPhrase">-</p>-->
+<!--                        </ng-container>-->
+
+<!--                        <ng-container *ngIf="header.key === 'isActive'">-->
+<!--                            <ng-container *ngIf="row?.isToggleActive">-->
+<!--                                <div class="btn-switch">-->
+<!--                                    <input-->
+<!--                                            [id]="i"-->
+<!--                                            [name]="i"-->
+<!--                                            [(ngModel)]="row.isActive"-->
+<!--                                            (change)="changeDataActive(row, i)"-->
+<!--                                            type="checkbox"-->
+<!--                                            class="switch">-->
+<!--                                </div>-->
+<!--                            </ng-container>-->
+<!--                            <ng-container *ngIf="!row?.isToggleActive">-->
+<!--                                <span [classList]="row.isActive? 'badge badge-pill mr-1 badge-light-success': 'badge badge-pill mr-1 badge-light-danger'">{{ row.isActive ? "Ativo" : "Inativo" }}</span>-->
+<!--                            </ng-container>-->
+<!--                        </ng-container>-->
+
+<!--                        <ng-container *ngIf="header.key === 'actions'">-->
+<!--                            <a *ngIf="header.actions.viewIsLink && header.actions.view && permissionBtnView" [routerLink]="row.viewLink">-->
+<!--                                <i class="ri-eye-line" *ngIf="header.actions.view"></i>-->
+<!--                            </a>-->
+<!--                            <a *ngIf="!header.actions.viewIsLink && header.actions.view && permissionBtnView" (click)="openView(row, i)">-->
+<!--                                <i class="ri-eye-line" *ngIf="header.actions.view"></i>-->
+<!--                            </a>-->
+
+<!--                            <a *ngIf="header.actions.editIsLink && permissionBtnEdit" [routerLink]="row.editLink">-->
+<!--                                <i class="ri-edit-2-line" *ngIf="header.actions.edit"></i>-->
+<!--                            </a>-->
+<!--                            <a *ngIf="!header.actions.editIsLink && header.actions.edit && permissionBtnEdit" (click)="openEdit(row, i)">-->
+<!--                                <i class="ri-edit-2-line" *ngIf="header.actions.edit"></i>-->
+<!--                            </a>-->
+
+<!--                            <a *ngIf="header.actions.checkDelete && header.actions.delete && permissionBtnRemove" (click)="checkRemove(row, i)">-->
+<!--                                <i class="ri-delete-bin-line" *ngIf="header.actions.delete"></i>-->
+<!--                            </a>-->
+<!--                        </ng-container>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Pagination &ndash;&gt;-->
+<!--    <div *ngIf="!loadingList && listData?.length && dataPagination.totalRecords > 20" class="container-pagination">-->
+<!--        <ngb-pagination-->
+<!--                [(page)]="dataPagination.currentPage"-->
+<!--                [collectionSize]="dataPagination.totalRecords"-->
+<!--                [pageSize]="dataPagination.totalRecordsPerPage"-->
+<!--                [maxSize]="5"-->
+<!--                [ellipses]="true"-->
+<!--                [boundaryLinks]="dataPagination.totalRecords >= 70"-->
+<!--                (pageChange)="onChangePage($event)">-->
+<!--        </ngb-pagination>-->
+
+<!--        <app-items-per-page-->
+<!--                [totalRecordsPerPage]="dataPagination.totalRecordsPerPage"-->
+<!--                (changeTotalRecords)="onChangeRecords($event)">-->
+<!--        </app-items-per-page>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Search &ndash;&gt;-->
+<!--    <div *ngIf="!loadingList && !listData?.length && isSearch" class="col-12 container-data-empty-search">-->
+<!--        <h6>Pesquisa inválida.</h6>-->
+<!--        <p>Nenhum item encontrado na pesquisa, tente novamente.</p>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Loading and Empty &ndash;&gt;-->
+<!--    <div class="force-mrl-30">-->
+<!--&lt;!&ndash;        <app-container-loading-and-alerts&ndash;&gt;-->
+<!--&lt;!&ndash;                [titleEmpty]="'Não existem items habilitados.'"&ndash;&gt;-->
+<!--&lt;!&ndash;                [descriptionEmpty]="'Você não tem nenhum item cadastrado no momento'"&ndash;&gt;-->
+<!--&lt;!&ndash;                [totalContent]="listData?.length"&ndash;&gt;-->
+<!--&lt;!&ndash;                [invalidRequest]="false"&ndash;&gt;-->
+<!--&lt;!&ndash;                [isSearch]="false"&ndash;&gt;-->
+<!--&lt;!&ndash;                [removeShadow]="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                [loadingContainer]="loadingList">&ndash;&gt;-->
+<!--&lt;!&ndash;        </app-container-loading-and-alerts>&ndash;&gt;-->
+<!--    </div>-->
+<!--</ng-container>-->
+
+<!--<ng-container *ngIf="isAccordionTable">-->
+
+<!--</ng-container>-->
+<div>table</div>

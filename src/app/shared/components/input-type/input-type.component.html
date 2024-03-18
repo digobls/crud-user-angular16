@@ -1,0 +1,70 @@
+<div [formGroup]="formGroup" class="default-input" [ngClass]="{'default-input-select': type === 'select', 'disable-select': disabled && type === 'select', 'invalid-box': (control.errors || control.invalid && (control.dirty || control.touched))}">
+  <label *ngIf="showLabel">
+    {{label}}
+
+    <small *ngIf="showOptional" class="optional">- Opcional</small>
+  </label>
+
+  <!-- Input type text, number, date, password -->
+  <ng-container *ngIf="type === 'text' || type === 'number' || type === 'date' || type === 'password' || type === 'email'">
+    <input [id]="id"
+           [name]="name"
+           [formControlName]="id"
+           [type]="type"
+           [readOnly]="disabled"
+           [placeholder]="placeholder"
+           [class]="'form-control'"
+           [ngClass]="iconClass ? 'input-with-icon' : ''"
+           [mask]="mask || ''"
+           (change)="changeInput()"
+           (keyup)="enterKeyInput($event)"/>
+  </ng-container>
+
+  <!-- Input type select -->
+  <ng-container *ngIf="type === 'select'">
+    <ng-select
+      [formControlName]="id"
+      [items]="listItems"
+      [bindLabel]="bindLabel"
+      [bindValue]="bindValue"
+      [attr.required]="isRequired"
+      [placeholder]="placeholder"
+      [loading]="loadingData"
+      [multiple]="multiple"
+      [clearable]="allowClear"
+      [class]="'form-control'"
+      [virtualScroll]="true"
+      [notFoundText]="'Nenhum resultado encontrado'">
+    </ng-select>
+  </ng-container>
+
+  <!-- Input type radio displayInline -->
+  <ng-container *ngIf="type === 'radio'">
+    <div *ngFor="let data of radioItems; let index = index;" class="styled-radio-btn" [ngClass]="{'list-inline': displayInline, 'list-block': !displayInline, 'checked-style-btn': control.value === data?.value}">
+      <input type="radio" [name]="id" (change)="changeValueRadioButton(data)" [id]="data.id" [value]="data" [checked]="control.value?.id === data?.id || control.value === data?.id"
+             [class.is-invalid]="control.errors || control.invalid && (control.dirty || control.touched)"
+             [class.is-valid]="!control.errors || control.valid">
+
+      <label class="custom-control-label" [for]="(data.id)">
+        <i *ngIf="data.icon" [class]="data.icon"></i>
+        {{data.name}}
+      </label>
+    </div>
+  </ng-container>
+
+  <!-- Icone input -->
+  <ng-container *ngIf="iconClass">
+    <i [class]="iconClass" class="icon-input"></i>
+  </ng-container>
+
+  <!-- Disabled -->
+  <ng-container *ngIf="disabled">
+    <div class="disable-content"></div>
+  </ng-container>
+
+  <!-- Messages errors -->
+  <span *ngIf="control?.invalid && (control?.dirty || control?.touched)" class="invalid-feedback">
+   <span *ngIf="control.errors?.['required']" [innerText]="invalidMsg"></span>
+   <span *ngIf="control?.errors?.['email']">Preencha um e-mail válido.</span>
+  </span>
+</div>
